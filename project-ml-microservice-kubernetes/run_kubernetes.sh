@@ -18,8 +18,8 @@ kubectl get pods
 ready=`kubectl get pods -o jsonpath="{.items[*].status.phase}"`
 while [ $ready != 'Running' ]
 do
-        echo "Waiting for Pod to be up"
-        sleep 5 
+        echo "Waiting for Pod"
+        sleep 10
         ready=`kubectl get pods -o jsonpath="{.items[*].status.phase}"`
 done
 
